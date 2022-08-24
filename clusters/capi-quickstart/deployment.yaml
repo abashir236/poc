@@ -2,7 +2,7 @@ apiVersion: cluster.x-k8s.io/v1beta1
 kind: ClusterClass
 metadata:
   name: quick-start
-  namespace: capi-quickstart
+  namespace: default
 spec:
   controlPlane:
     machineInfrastructure:
@@ -245,7 +245,7 @@ apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
 kind: DockerClusterTemplate
 metadata:
   name: quick-start-cluster
-  namespace: capi-quickstart
+  namespace: default
 spec:
   template:
     spec: {}
@@ -254,7 +254,7 @@ apiVersion: controlplane.cluster.x-k8s.io/v1beta1
 kind: KubeadmControlPlaneTemplate
 metadata:
   name: quick-start-control-plane
-  namespace: capi-quickstart
+  namespace: default
 spec:
   template:
     spec:
@@ -284,7 +284,7 @@ apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
 kind: DockerMachineTemplate
 metadata:
   name: quick-start-control-plane
-  namespace: capi-quickstart
+  namespace: default
 spec:
   template:
     spec:
@@ -296,7 +296,7 @@ apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
 kind: DockerMachineTemplate
 metadata:
   name: quick-start-default-worker-machinetemplate
-  namespace: capi-quickstart
+  namespace: default
 spec:
   template:
     spec:
@@ -308,7 +308,7 @@ apiVersion: bootstrap.cluster.x-k8s.io/v1beta1
 kind: KubeadmConfigTemplate
 metadata:
   name: quick-start-default-worker-bootstraptemplate
-  namespace: capi-quickstart
+  namespace: default
 spec:
   template:
     spec:
@@ -322,7 +322,7 @@ apiVersion: cluster.x-k8s.io/v1beta1
 kind: Cluster
 metadata:
   name: capi-quickstart
-  namespace: capi-quickstart
+  namespace: default
 spec:
   clusterNetwork:
     pods:
